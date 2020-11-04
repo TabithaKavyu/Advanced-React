@@ -9,16 +9,23 @@ const UseStateObject = () => {
 
   });
 
+  const [name, setName] = useState('Tabitha');
+  const [age, setAge] = useState('21');
+  
+  const [message, setMessage] = useState('Vibration DML');
+  
+
   const changeMessage = () => {
-    setPerson({ ...person, message: 'It needs to go away' });
+    //setPerson({ ...person, message: 'It needs to go away' });
+    setName('Tabby')
   }
   
   
   return (
     <>
-      <h3>{person.name}</h3>
-      <h3>{person.age}</h3>
-      <h3>{person.message}</h3>
+      <h3>{name}</h3>
+      <h3>{age}</h3>
+      <h3>{message}</h3>
       <button className='btn' onClick={changeMessage}>change message</button>
     </>
   );
