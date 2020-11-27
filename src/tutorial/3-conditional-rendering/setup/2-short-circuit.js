@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // ternary operator
 
 const ShortCircuit = () => {
-  const [text, setText] = useState('j');
+  const [text, setText] = useState('');
   const firstValue = text || 'hello world';
   const secondValue = text && 'hello world';
 
@@ -11,6 +11,7 @@ const ShortCircuit = () => {
     <>
       <h1>{text || 'Tabby Tabby'}</h1>;
       {text && <h1>Hello Tabby</h1>}
+      {!text && <h1>Hello World</h1>}
     </>
   );
 };
